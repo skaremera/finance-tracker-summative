@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Finance Tracker</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+<a href="#main">Skip to content</a>
+
+<header>
+  <h1>Finance Tracker</h1>
+</header>
+
+<main id="main">
+
+  <section>
+    <h2>Dashboard</h2>
+    <div id="total"></div>
+  </section>
+
+  <section>
+    <h2>Add Transaction</h2>
+
+    <form id="form">
+      <input id="desc" placeholder="Description" required>
+      <input id="amount" type="number" placeholder="Amount" required>
+      <input id="category" placeholder="Category">
+      <input id="date" type="date">
+      <button type="submit">Add</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Tools</h2>
+    <input id="search" placeholder="Search...">
+
+    <select id="sort">
+      <option value="date">Sort by Date</option>
+      <option value="amount">Sort by Amount</option>
+      <option value="category">Sort by Category</option>
+    </select>
+
+    <button onclick="exportData()">Export</button>
+    <input type="file" onchange="importData(event)">
+  </section>
+
+  <section>
+    <h2>Records</h2>
+    <ul id="list"></ul>
+  </section>
+
+</main>
+
+<script src="scripts/app.js"></script>
+
+</body>
+</html>
